@@ -1,0 +1,42 @@
+<?php
+/**
+ * Implements hook_schema().
+ */
+function custom_form_schema() {
+  $schema['my_custom_frm'] = [
+    'fields' => [
+      'id'=> [
+        'type'=>'serial',
+        'not null' => TRUE,
+      ],
+      'uid'=> [
+        'type' => 'int',
+        'length' => 100,
+        'not null' => TRUE,
+      ],
+      'name'=> [
+        'type' => 'varchar',
+        'length' => 100,
+        'not null' => TRUE,
+      ],
+      'phone'=> [
+        'type' => 'varchar',
+        'length' => 100,
+        'not null' => TRUE,
+      ],
+      'email'=> [
+        'type' => 'varchar',
+        'length' => 100,
+        'not null' => TRUE,
+      ],
+      'profile_image'=> [
+        'type' => 'varchar',
+        'length' => 150,
+      ],
+    ],
+    'primary key' => ['id'],
+  ];
+
+  return $schema;
+
+}

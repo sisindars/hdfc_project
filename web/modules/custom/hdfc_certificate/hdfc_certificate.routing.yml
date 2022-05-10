@@ -1,0 +1,15 @@
+hdfc_certificate.autocomplete:
+  path: '/autocomplete'
+  defaults:
+    _controller: '\Drupal\hdfc_certificate\Controller\HdfcCertificateController::handleAutocomplete'
+    _format: json
+  requirements:
+    _permission: 'access content'
+
+hdfc_certificate.form_autocomplete:
+  path: '/form'
+  defaults:
+    _form:  '\Drupal\hdfc_certificate\Form\HdfcCertificateForm'
+    _title: 'Autocomplete Form'
+  requirements:
+    _permission: 'access content'

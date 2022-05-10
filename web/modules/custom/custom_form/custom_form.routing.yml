@@ -1,0 +1,14 @@
+custom_form.custom_form:
+  path: '/customform'
+  defaults:
+    _form: '\Drupal\custom_form\Form\CustomForm'
+    _title: 'CustomForm'
+  requirements:
+    _access: 'TRUE'
+custom_form.display_table_controller_display:
+  path: '/customtable'
+  defaults:
+    _controller: '\Drupal\custom_form\Controller\DisplayTableController::display'
+    _title: 'display'
+  requirements:
+    _permission: 'access content'

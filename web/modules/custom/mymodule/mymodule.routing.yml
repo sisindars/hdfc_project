@@ -1,0 +1,15 @@
+mymodule.autocomplete:
+  path: '/autocomplete/articles'
+  defaults:
+    _controller: '\Drupal\mymodule\Controller\JsonApiArticlesController::handleAutocomplete'
+    _format: json
+  requirements:
+    _permission: 'access content'
+
+mymodule.form_autocomplete:
+  path: '/autocomplete-form'
+  defaults:
+    _form:  '\Drupal\mymodule\Form\MyAutocompleteForm'
+    _title: 'Autocomplete Form'
+  requirements:
+    _permission: 'access content'
